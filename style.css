@@ -1,0 +1,89 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(8, 123, 123);
+    min-height: 90vh;
+}
+
+.container{
+    background-color: white;
+    border-radius: 7px;
+    padding: 10px 15px; 
+    max-width: 400px;
+    height: 250px;
+    transition: height 0.2s ease;
+}
+
+.container.active {
+    height:530px ;
+}
+
+header h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+header p{
+    font-size: 15px;
+    color: #474747;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container .form{
+    margin: 20px, 0, 30px;
+    
+}
+
+.form input{
+    width: 100%;
+    height: 55px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 17px;
+    border: 1px,solid,#999 ;
+    outline: none;
+    font-size: medium;
+}
+
+.form button{
+    width: 100%;
+    height: 55px;
+    padding: 8px;
+    margin-top: 17px;
+    background-color: aqua;
+    border-radius: 8px;
+    font-size: medium;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.qr-code{
+    
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 33px,0;
+    border-radius: 10px;
+    height: 250px;
+    border: 1px solid black
+}
+
+.container.active .qr-code{
+    opacity: 1;
+    pointer-events: auto ;
+    transition: opacity 0.5s 0.5s ease;
+    padding: 33px,0;
+}
